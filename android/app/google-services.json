@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "685157565022",
+    "project_id": "walkthrough-2256a",
+    "storage_bucket": "walkthrough-2256a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685157565022:android:6d0d9a0d527fb11f312acf",
+        "android_client_info": {
+          "package_name": "br.com.walkthrough.walkthrough"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685157565022-umto1aigo4l7geq5577a6evfdj01jpih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVkMtXfnsKppfhcVF2sMJQhl3CyOY_jOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685157565022-umto1aigo4l7geq5577a6evfdj01jpih.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "685157565022-e3je5p0igt5957m4vo8i0pv56ldo99uv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.walkthrough.walkthrough"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
