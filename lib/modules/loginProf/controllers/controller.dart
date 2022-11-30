@@ -56,10 +56,8 @@ class UserProfController extends ChangeNotifier {
     try {
       final String? userId = await _firebaseAuthProvider.getCurrentUID();
       UserProf user = await _firebaseFirestoreProvider.getDadosUsuario(userId);
-      print(user.toString());
       return user;
     } catch (e) {
-      print(e.toString());
       return UserProf();
     }
   }
@@ -79,16 +77,12 @@ class UserProfController extends ChangeNotifier {
       sucesso();
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        print('Login ou senha incorretos.');
         falha('Login ou senha incorretos.');
       } else if (e.code == 'wrong-password') {
-        print('Login ou senha incorretos.');
         falha('Login ou senha incorretos.');
       } else if (e.code == 'invalid-email') {
-        print('Informe um email válido.');
         falha('Informe um email válido.');
       } else if (e.code == 'user-disabled') {
-        print('Login ou senha incorretos.');
         falha('Login ou senha incorretos.');
       }
     } catch (e) {

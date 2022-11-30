@@ -15,7 +15,6 @@ class FireBaseFirestoreProvider {
       UserProf user = UserProf.fromMap(qs.data());
       return user;
     } on Exception catch (e) {
-      print(e.toString());
       throw Exception(e.toString());
     }
   }
@@ -29,7 +28,6 @@ class FireBaseFirestoreProvider {
     return true;
       
     } on Exception catch (e) {
-      print(e.toString());
       throw Exception(e.toString());
     }
   }

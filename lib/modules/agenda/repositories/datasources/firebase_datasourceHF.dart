@@ -60,7 +60,6 @@ class FirebaseDataSource extends DataSourceBaseF {
       String hf = horarioRange.split('.')[1];
       int t = -1;
       int v = -1;
-      print(int.parse(hi.substring(0, 2)).toString() + '+' + int.parse(hf.substring(0, 2)).toString());
       for (var i = int.parse(hi.substring(0, 2));
           i <= int.parse(hf.substring(0, 2));
           i++) {
@@ -79,7 +78,6 @@ class FirebaseDataSource extends DataSourceBaseF {
         for (var j = t; j < v; j++) {
           for (var element in lista) {
             if (int.parse(element!.substring(0, 2)) == i && int.parse(element.substring(3)) == j){
-              print(i.toString() + ':' + j.toString());
               return true;
             }
           }

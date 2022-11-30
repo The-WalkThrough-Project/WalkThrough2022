@@ -45,7 +45,6 @@ class _LoginPageControllerState extends State<LoginPageController> {
         return;
       }
       user.nome != '' ? null : novoLogin = true;
-      print(novoLogin);
       token;
       user.codigo = token;
     });

@@ -58,10 +58,8 @@ class HorarioAgendadoRepository{
     try {
       maps = await _db!.selecionarTodosTemp();
     } on Exception catch (e) {
-      print(e.toString());
       maps = await _db2!.selecionarTodosTemp();
     }
-    print('maps: ' + maps.toString());
     var lista = <HorarioAgendado>[];
     if(maps == null){
       return null;
@@ -90,10 +88,8 @@ class HorarioAgendadoRepository{
     try {
       maps = await _db!.selecionarTodos();
     } on Exception catch (e) {
-      print(e.toString());
       maps = await _db2!.selecionarTodos();
     }
-    print('maps: ' + maps.toString());
     var lista = <HorarioAgendado>[];
     Map<String, List<HorarioAgendado>> retorno = {};
     if(maps == null){
@@ -111,8 +107,6 @@ class HorarioAgendadoRepository{
       }
     }
 
-    print(lista.toString());
-
     for (var item in lista) {
       if(!retorno.containsKey(item.data)) {
         retorno.addAll({item.data: [item]});
@@ -124,7 +118,6 @@ class HorarioAgendadoRepository{
       }
     }
     
-    print('retorno map: ' + retorno.toString());
     ValueNotifier<Map<String, List<HorarioAgendado>>> retorno1 = ValueNotifier(retorno);
     return retorno1;
   }

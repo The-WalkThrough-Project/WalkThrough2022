@@ -42,7 +42,6 @@ class BancoHorarios {
   }
 
   static Future _createDB(Database db, int version) async {
-    print("Criando Tabelas...");
     await db.execute(
         "CREATE TABLE horariosFixos(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, uid TEXT, nomeProfessor VARCHAR(50), nomeDisciplina VARCHAR(50), horario TEXT, diaSemana VARCHAR(20), lab VARCHAR(5));");
     
@@ -66,7 +65,6 @@ class BancoHorarios {
   }*/
 
   Future<void> insertHorarioFixo(HorarioFixo horarioFixo) async {
-    print("Inserindo horário....");
     
     final db = await instance.database;
     db.close();
@@ -76,7 +74,6 @@ class BancoHorarios {
   }
 
   Future<int?> insertHorarioAgendado(HorarioAgendado horarioAgendado) async {
-    print("Inserindo horário....");
     
     final db = await instance.database;
 

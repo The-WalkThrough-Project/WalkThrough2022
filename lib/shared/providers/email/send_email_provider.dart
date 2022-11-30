@@ -42,8 +42,6 @@ class EmailProvider {
         }
       }),
     );
-
-    print(response.body);
   }
 
   Future enviaEmailResposta({
@@ -87,7 +85,5 @@ class EmailProvider {
         }
       }),
     );
-
-    print(response.body);
   }
 }

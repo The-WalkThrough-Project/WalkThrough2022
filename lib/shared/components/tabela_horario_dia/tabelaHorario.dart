@@ -34,7 +34,6 @@ class _TabelaHorariosState extends State<TabelaHorarios> {
   Map<String, dynamic> retornaHorarios(String horarioT, String diaSemana, String lab){
     for(var horario in widget.horarios){
         if(horario.data()!['horario'] == horarioT && horario.data()!['diaSemana'] == diaSemana && horario.data()!['lab'] == lab){
-          print(horario.toString());
           return horario.data();
         }
     }

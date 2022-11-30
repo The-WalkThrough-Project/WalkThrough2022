@@ -56,7 +56,6 @@ class HorarioController extends ChangeNotifier{
   }
 
   existeHorario(HorarioAgendado horario, String dia) async{
-    print(dia);
     return await _repoHorarioF.existeHorario(horario, dia);
   }
 

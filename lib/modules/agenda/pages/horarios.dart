@@ -40,7 +40,6 @@ class _HorariosPageState extends State<HorariosPage> {
     setState(() {
       horarios;
     });
-    print(horarios.toString());
 
     setState(() {
       isLoading = false;

@@ -92,7 +92,6 @@ class FirebaseDataSourceHA extends DataSourceBaseA {
         .where('data', isEqualTo: string)
         .where('isTemp', isEqualTo: 0)
         .get();
-    print('dasdadas WQSQS:' + qs.docs.toString());
     
 
     for (var element in qs.docs) {
@@ -100,7 +99,6 @@ class FirebaseDataSourceHA extends DataSourceBaseA {
       String hf = element.get('horarioFinal');
       int t = -1;
       int v = -1;
-      print(int.parse(hi.substring(0, 2)).toString() + '+' + int.parse(hf.substring(0, 2)).toString());
       for (var i = int.parse(hi.substring(0, 2));
           i <= int.parse(hf.substring(0, 2));
           i++) {

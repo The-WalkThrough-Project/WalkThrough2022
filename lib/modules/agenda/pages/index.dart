@@ -55,12 +55,8 @@ class _AgendaPageState extends State<AgendaPage> {
     setState(() {
       carregando = true;
     });
-    print(formatDate(
-        DateTime.now(), [dd, ' de ', MM, ' às ', H, ':', n, ':', s],
-        locale: const PortugueseDateLocale()));
     await Future.delayed(const Duration(seconds: 1));
     selectedHorarios = await _horariosAController.getHorariosA();
-    print('selected: ' + selectedHorarios.toString());
     if (!mounted) return;
     setState(() {
       selectedHorariosValue = selectedHorarios.value;
@@ -108,8 +104,6 @@ class _AgendaPageState extends State<AgendaPage> {
     } else {
       diaSelecionado = DateTime.now();
     }
-
-    print('dia: ' + diaSelecionado.toString());
     getHorarios();
     _horariosAController.lab.text = dropdownValue;
     getHorarios();

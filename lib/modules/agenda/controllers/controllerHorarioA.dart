@@ -17,7 +17,6 @@ class HorariosAgendadosController extends ChangeNotifier {
 
   Future<ValueNotifier<Map<String, List<HorarioAgendado>>?>> getHorariosA() async {
     var horarios = await _repositoryA.selecionarTodos();
-    print('horarios map: ' + horarios.toString());
     return horarios;
   }
 
@@ -113,8 +112,6 @@ class HorariosAgendadosController extends ChangeNotifier {
 
   Future<List<HorarioAgendado>?> getHorariosATemp() async {
     var horarios = await _repositoryA.selecionarTodosTemp();
-    
-    print('horarios map temp: ' + horarios.toString());
     return horarios;
   }
 

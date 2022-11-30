@@ -24,8 +24,6 @@ class NovoLoginController extends ChangeNotifier {
           email: email.text.trim(),
           codigo: usuario.codigo,
           id: usuario.id);
-      
-      print('[' + user.email! + ']');
 
       User? currentUser = await _firebase_auth.getCurrentUser();
       user.tipoUsuario = usuario.tipoUsuario;

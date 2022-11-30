@@ -25,7 +25,6 @@ class FireBaseAuthProvider{
           'phoneNumber': userCredential.user?.phoneNumber
         };
     } on FirebaseAuthException catch (e) {
-      print(e.toString());
       if (e.code == 'user-not-found') {
         throw Exception('Login ou senha incorretos.');
       } else if (e.code == 'wrong-password') {
@@ -43,7 +42,6 @@ class FireBaseAuthProvider{
     try {
       await _firebaseauth.signOut();
     } on Exception catch (e) {
-      print(e.toString());
       throw Exception(e.toString());
     }
   }
@@ -52,7 +50,6 @@ class FireBaseAuthProvider{
     try {
       await user?.updateEmail(emailNovo ?? '');
     } catch (e) {
-      print(e.toString());
       if(e.toString().contains('invalid-email')){
         throw Exception("Informe um email válido!");
       }else if(e.toString().contains('email-already-in-use')){
